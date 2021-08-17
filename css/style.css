@@ -31,6 +31,10 @@ body {
   font-family: var(--fonte-padrao);
 }
 
+a.externo::after {
+  content: "\00A0\1F517";
+}
+
 header {
   background-image: linear-gradient(to bottom, var(--cor04), var(--cor05));
   min-height: 150px;
@@ -51,6 +55,7 @@ header > p {
   font-family: var(--fonte-padrao);
   font-size: 1.2em;
   margin: auto;
+  margin-bottom: 20px;
   max-width: 500px;
   padding-left: 10px;
   padding-right: 10px;
@@ -139,7 +144,58 @@ main img.pequena {
   max-width: 350px;
 }
 
+div.video {
+  background-color: var(--cor05);
+  margin: 0px -20px 30px -20px;
+  padding: 20px;
+  padding-bottom: 59%;
+  position: relative;
+}
+
+div.video > iframe {
+  position: absolute;
+  left: 5%;
+  height: 90%;
+  top: 5%;
+  width: 90%;
+}
+
+aside {
+  background-color: var(--cor01);
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.438);
+  padding: 10px;
+}
+
+aside > ul {
+  columns: 2;
+  list-style-position: inside;
+  list-style-type: "\2714\00A0\00A0";
+}
+
+aside > h3 {
+  background-color: var(--cor05);
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+  padding: 10px;
+  margin: -10px -10px 0px -10px;
+}
+
 footer {
   background-color: var(--cor05);
   color: white;
+  font-size: 0.8em;
+  padding: 8px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--cor01);
+  text-decoration: underline;
 }
